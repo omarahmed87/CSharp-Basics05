@@ -1,8 +1,8 @@
-﻿#region 8st answer
+﻿#region 9st answer
 /* #region 1st answer
-/* 8-Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
-new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
-afterward.
+/*1-Write a method bool TryGetPrice(string title, out double price) that returns 
+true and sets price to 25.5 if title is "Clean Code", otherwise returns false and 
+sets price to 0. Call it and print the price if found 
 */
 #endregion
 
@@ -12,16 +12,24 @@ public class Program
 {
     public static void Main()
     {
-        double[] prices =[25.5, 40.0];
-        ReplaceArray(ref prices);
-
-        Console.WriteLine(prices.Length);
-
+        string title = "Clean Code";
+        if (TryGetPrice(title, out double price))
+        {
+            Console.WriteLine(price);
+        }
     }
-
-    static void ReplaceArray(ref double[] prices)
+    static bool TryGetPrice(string title, out double price)
     {
-        double[] newArray = [10.0, 12.5, 15.0];
-        prices = newArray;
+        if (title == "Clean Code")
+        {
+            price = 25.5;
+            return true;
+        }
+        else
+        {
+            price = 0;
+            return false;
+        }
     }
+
 }

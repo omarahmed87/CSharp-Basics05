@@ -1,22 +1,26 @@
-﻿#region 5st answer
+﻿#region 6st answer
 /* #region 1st answer
-/* 5-Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
-int pages = 400; and print pages afterward. What do you expect to see, and why?
+/* 6-Write a method ApplyDiscount(double[] prices) that subtracts 5 from prices[0]. Call it
+with double[] prices = { 25.5, 40.0 }; and print prices[0] afterward. What do you expect to
+see, and why?
 */
 #endregion
+
+using System.Diagnostics;
 
 public class Program
 {
     public static void Main()
     {
-        int pages = 400;
-        AddBonusPages(pages);
-        Console.WriteLine(pages); 
-        //400 pssing by value type does't change the original value, it takes just an instans
+        double[] prices = [25.5, 40.0];
+        ApplyDiscount(prices);
+        Console.WriteLine(prices[0]); 
     }
+    // 20.5 Passing by referece type changes the original value  
 
-    static void AddBonusPages(int pages)
+    static void ApplyDiscount(double[] prices)
     {
-        pages += 50;
+        prices[0] -= 5;
+
     }
 }

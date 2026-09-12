@@ -1,7 +1,8 @@
-﻿#region 7st answer
+﻿#region 8st answer
 /* #region 1st answer
-/* 7-Rewrite the method from question 5 as AddBonusPagesByRef(ref int pages) using ref.
-Call it and print pages afterward. How is the result different from question 5?
+/* 8-Write a method ReplaceArray(ref double[] prices) that replaces prices entirely with a
+new array { 10.0, 12.5, 15.0 }. Call it with your prices array and print prices.Length
+afterward.
 */
 #endregion
 
@@ -11,14 +12,16 @@ public class Program
 {
     public static void Main()
     {
-        int pages = 400;
-        AddBonusPagesByRef(ref pages);
-        Console.WriteLine(pages);
-        //450 using ref, Passing a value type by reference ,it changes the original value
+        double[] prices =[25.5, 40.0];
+        ReplaceArray(ref prices);
+
+        Console.WriteLine(prices.Length);
+
     }
 
-    static void AddBonusPagesByRef(ref int pages)
+    static void ReplaceArray(ref double[] prices)
     {
-        pages += 50;
+        double[] newArray = [10.0, 12.5, 15.0];
+        prices = newArray;
     }
 }

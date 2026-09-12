@@ -1,6 +1,6 @@
-﻿#region 10st answer
-/*2-Write a method PrintBookInfo(string title, int pages = 300) where pages is 
-optional. Call it once with only a title, and once passing both a title and pages. 
+﻿#region 11st answer
+/*3-Using the PrintBookInfo method from the question above, call it by naming 
+the parameters, passing pages before title. 
 */
 #endregion
 
@@ -12,8 +12,7 @@ public class Program
     {
         string title = "Clean Code";
         int pages = 300;
-        PrintBookInfo(title);
-        PrintBookInfo(title, 450);
+        PrintBookInfo(pages:pages, title:title );
     }
     static void PrintBookInfo(string title, int pages = 300)
     {

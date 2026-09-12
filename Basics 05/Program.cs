@@ -1,6 +1,5 @@
-﻿#region 14st answer
-/*2-Add an internal int copiesInStock = 5; field to Book. Print it from Main. 
-Does it compile?  Why?
+﻿#region 15st answer
+/* 3-Add a public string Title; field to Book. Set it and print it from Main.
 */
 #endregion
 
@@ -9,13 +8,14 @@ public class Program
     public static void Main()
     {
         Book book = new Book();
-        Console.WriteLine(book.copiesInStock);
-        // Yes, it compiles.
-        // 'internal' members are accessible anywhere within the same assembly (project).
+        book.Title = "Clean Code"; 
+        Console.WriteLine(book.Title);
 
+        // 'public' is accessible from any other code in the same assembly or another assembly that references it.
     }
+
     public class Book
     {
-        internal int copiesInStock = 5;
+        public string Title;
     }
 }

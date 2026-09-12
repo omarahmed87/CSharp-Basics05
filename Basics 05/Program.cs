@@ -1,21 +1,20 @@
-﻿#region 11st answer
-/*3-Using the PrintBookInfo method from the question above, call it by naming 
-the parameters, passing pages before title. 
+﻿#region 12st answer
+/*4-Write a method PrintAllTitles(params string[] titles) that prints each title on its 
+own line. Call it with three book titles. 
 */
 #endregion
-
-using System.Diagnostics;
 
 public class Program
 {
     public static void Main()
     {
-        string title = "Clean Code";
-        int pages = 300;
-        PrintBookInfo(pages:pages, title:title );
+        PrintAllTitles("Clean Code", "CSharp", "SQL");
     }
-    static void PrintBookInfo(string title, int pages = 300)
+    static void PrintAllTitles(params string[] titles)
     {
-        Console.WriteLine($"Title is: {title} , Pages is: {pages}");
+        foreach (var title in titles)
+        {
+            Console.WriteLine(title);
+        }
     }
 }

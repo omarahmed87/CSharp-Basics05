@@ -1,7 +1,7 @@
-﻿#region 4st answer
+﻿#region 5st answer
 /* #region 1st answer
-/* 4-Write a method PrintBookTitle(string title) that prints "Book title: " + title.
-Call it with "Clean Code".
+/* 5-Write a method AddBonusPages(int pages) that adds 50 to pages. Call it with a variable
+int pages = 400; and print pages afterward. What do you expect to see, and why?
 */
 #endregion
 
@@ -9,13 +9,14 @@ public class Program
 {
     public static void Main()
     {
-        string title = "Clean code";
-        PrintWelcomeMessage(title);
-
+        int pages = 400;
+        AddBonusPages(pages);
+        Console.WriteLine(pages); 
+        //400 pssing by value type does't change the original value, it takes just an instans
     }
 
-    static void PrintWelcomeMessage(string title)
+    static void AddBonusPages(int pages)
     {
-        Console.WriteLine($"Book title: {title}");
+        pages += 50;
     }
 }
